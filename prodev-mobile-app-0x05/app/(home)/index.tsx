@@ -1,4 +1,4 @@
-import PropertyListing from "@/components/PropertyListing ";
+import PropertyListing from "@/components/PropertyListing";
 import { FILTERS, SAMPLE_DATA } from "@/constants/data";
 import { styles } from "@/styles/_homestyle";
 import { Feather } from "@expo/vector-icons";
