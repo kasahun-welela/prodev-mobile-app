@@ -3,7 +3,7 @@ import { FontAwesome, Ionicons } from "@expo/vector-icons";
 import { Image, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
-export default function Index() {
+export default function Signin() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
