@@ -89,7 +89,7 @@ export default function Join() {
 
         <View style={styles.signupgroup}>
           <Text style={styles.signupTitleText}>I have an account?</Text>
-          <Text style={[styles.signupSubTitleText, { marginLeft: 10 }]}>
+          <Text style={styles.signupSubTitleText}>
             <Link href="/signin"> Login now</Link>
           </Text>
         </View>
