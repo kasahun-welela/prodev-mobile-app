@@ -1,3 +1,4 @@
+import { Link } from "expo-router";
 import {
   Dimensions,
   Image,
@@ -94,12 +95,14 @@ export default function Index() {
               <View style={styles.buttonGroup}>
                 <TouchableOpacity style={styles.button}>
                   <Text style={{ ...styles.textSmall, color: "black" }}>
-                    Join here
+                    <Link href="/join">Join here</Link>
                   </Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.transparentButton}>
-                  <Text style={styles.textSmall}>Sign In</Text>
+                  <Text style={styles.textSmall}>
+                    <Link href="/signin">Sign In</Link>
+                  </Text>
                 </TouchableOpacity>
               </View>
               <View style={{ alignItems: "center", paddingVertical: 20 }}>

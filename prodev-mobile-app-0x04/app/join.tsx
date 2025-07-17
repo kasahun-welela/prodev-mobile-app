@@ -8,13 +8,17 @@ export default function Join() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
-        <View style={styles.signupgroup}>
-          <Ionicons name="arrow-back" size={25} />
-          <Image source={require("@/assets/images/Logo.png")} />
+        <View style={styles.iconsection}>
+          <Link href="/">
+            <Ionicons name="arrow-back" size={25} />
+          </Link>
+
+          <Image source={require("@/assets/images/logo-green.png")} />
         </View>
-        <Text style={styles.titleText}>Create Account</Text>
+        <Text style={styles.titleText}>Create Your</Text>
+        <Text style={styles.titleText}>Account</Text>
         <Text style={styles.subText}>
-          Enter your email and password to Create account.
+          Enter your details to Create a new account.
         </Text>
 
         <View style={styles.formGroup}>
@@ -25,8 +29,15 @@ export default function Join() {
               style={styles.formControl}
             />
           </View>
-          <View style={{ marginTop: 20 }}>
-            <Text style={styles.formControl}>Password</Text>
+          <View>
+            <Text style={styles.formLabel}>Password</Text>
+            <View style={styles.formPasswordControl}>
+              <TextInput style={{ flex: 1 }} />
+              <FontAwesome name="eye-slash" size={24} color="#7E7B7B" />
+            </View>
+          </View>
+          <View>
+            <Text style={styles.formLabel}>Confirm Password</Text>
             <View style={styles.formPasswordControl}>
               <TextInput style={{ flex: 1 }} />
               <FontAwesome name="eye-slash" size={24} color="#7E7B7B" />
@@ -35,7 +46,7 @@ export default function Join() {
         </View>
 
         <TouchableOpacity style={styles.primaryButton}>
-          <Text style={styles.buttonText}>Create Account</Text>
+          <Text style={styles.buttonText}>Create </Text>
         </TouchableOpacity>
 
         <View style={styles.dividerGroup}>
@@ -60,7 +71,7 @@ export default function Join() {
             </View>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.secondaryButtonGroup}>
+          <TouchableOpacity style={styles.secondaryButton}>
             <View
               style={{
                 flexDirection: "row",
@@ -77,7 +88,7 @@ export default function Join() {
         </View>
 
         <View style={styles.signupgroup}>
-          <Text style={styles.subText}>I have an account?</Text>
+          <Text style={styles.signupTitleText}>I have an account?</Text>
           <Text style={[styles.signupSubTitleText, { marginLeft: 10 }]}>
             <Link href="/signin"> Login now</Link>
           </Text>

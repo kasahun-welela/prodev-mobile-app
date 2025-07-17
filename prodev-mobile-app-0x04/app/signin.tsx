@@ -8,11 +8,13 @@ export default function SignIn() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
-        <View style={styles.signupgroup}>
-          <Ionicons name="arrow-back" size={25} />
-          <Image source={require("@/assets/images/Logo.png")} />
+        <View style={styles.iconsection}>
+          <Link href="/">
+            <Ionicons name="arrow-back" size={25} />
+          </Link>
+          <Image source={require("@/assets/images/logo-green.png")} />
         </View>
-        <Text style={styles.titleText}>Join</Text>
+        <Text style={styles.titleText}>Signin in to your </Text>
         <Text style={styles.titleText}>Account</Text>
         <Text style={styles.subText}>
           Enter your email and password to sign in.
@@ -27,7 +29,7 @@ export default function SignIn() {
             />
           </View>
           <View style={{ marginTop: 20 }}>
-            <Text style={styles.formControl}>Password</Text>
+            <Text style={styles.formLabel}>Password</Text>
             <View style={styles.formPasswordControl}>
               <TextInput style={{ flex: 1 }} />
               <FontAwesome name="eye-slash" size={24} color="#7E7B7B" />
@@ -62,7 +64,7 @@ export default function SignIn() {
             </View>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.secondaryButtonGroup}>
+          <TouchableOpacity style={styles.secondaryButton}>
             <View
               style={{
                 flexDirection: "row",
@@ -79,7 +81,7 @@ export default function SignIn() {
         </View>
 
         <View style={styles.signupgroup}>
-          <Text style={styles.subText}>Don't have an account?</Text>
+          <Text style={styles.signupTitleText}>Don't have an account?</Text>
           <Text style={styles.signupSubTitleText}>
             {" "}
             <Link href="/join">Join now</Link>
