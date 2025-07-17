@@ -1,5 +1,6 @@
 import { styles } from "@/styles/_joinstyle";
 import { FontAwesome, Ionicons } from "@expo/vector-icons";
+import { Link } from "expo-router";
 import { Image, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
@@ -11,10 +12,9 @@ export default function Join() {
           <Ionicons name="arrow-back" size={25} />
           <Image source={require("@/assets/images/Logo.png")} />
         </View>
-        <Text style={styles.titleText}>Sign in to your</Text>
-        <Text style={styles.titleText}>Account</Text>
+        <Text style={styles.titleText}>Create Account</Text>
         <Text style={styles.subText}>
-          Enter your email and password to sign in.
+          Enter your email and password to Create account.
         </Text>
 
         <View style={styles.formGroup}>
@@ -32,11 +32,10 @@ export default function Join() {
               <FontAwesome name="eye-slash" size={24} color="#7E7B7B" />
             </View>
           </View>
-          <Text style={styles.forgotPasswordText}>Forgot password?</Text>
         </View>
 
         <TouchableOpacity style={styles.primaryButton}>
-          <Text style={styles.buttonText}>Sign in</Text>
+          <Text style={styles.buttonText}>Create Account</Text>
         </TouchableOpacity>
 
         <View style={styles.dividerGroup}>
@@ -78,8 +77,10 @@ export default function Join() {
         </View>
 
         <View style={styles.signupgroup}>
-          <Text style={styles.subText}>Don't have an account?</Text>
-          <Text style={styles.signupSubTitleText}>Join now</Text>
+          <Text style={styles.subText}>I have an account?</Text>
+          <Text style={[styles.signupSubTitleText, { marginLeft: 10 }]}>
+            <Link href="/signin"> Login now</Link>
+          </Text>
         </View>
       </SafeAreaView>
     </SafeAreaProvider>

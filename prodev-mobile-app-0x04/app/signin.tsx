@@ -1,9 +1,10 @@
 import { styles } from "@/styles/_joinstyle";
 import { FontAwesome, Ionicons } from "@expo/vector-icons";
+import { Link } from "expo-router";
 import { Image, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
-export default function Signin() {
+export default function SignIn() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
@@ -11,7 +12,7 @@ export default function Signin() {
           <Ionicons name="arrow-back" size={25} />
           <Image source={require("@/assets/images/Logo.png")} />
         </View>
-        <Text style={styles.titleText}>Sign in to your</Text>
+        <Text style={styles.titleText}>Join</Text>
         <Text style={styles.titleText}>Account</Text>
         <Text style={styles.subText}>
           Enter your email and password to sign in.
@@ -79,7 +80,10 @@ export default function Signin() {
 
         <View style={styles.signupgroup}>
           <Text style={styles.subText}>Don't have an account?</Text>
-          <Text style={styles.signupSubTitleText}>Join now</Text>
+          <Text style={styles.signupSubTitleText}>
+            {" "}
+            <Link href="/join">Join now</Link>
+          </Text>
         </View>
       </SafeAreaView>
     </SafeAreaProvider>
